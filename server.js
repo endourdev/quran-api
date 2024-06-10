@@ -13,6 +13,7 @@ app.use((req, res, next) => {
 
 app.get('/', (req, res, next) => {
     res.send('API OF QURAN SITE');
+    next();
 });
 
 app.use(bodyParser.json());
@@ -20,7 +21,7 @@ app.use(bodyParser.json());
 // Route pour recevoir l'id et le chapter et envoyer une requête à un serveur externe
 app.post('/api', async (req, res, next) => {
     const { id, chapter } = req.body;
-    console.log(`Reçu - ID: ${id}, Chapter: ${chapter}`); // Log des valeurs reçues
+    console.log(`ID Reçu : ${id}, Sourate Reçue : ${chapter}`); // Log des valeurs reçues
 
     try {
         const fetch = await import('node-fetch'); // Import dynamique de node-fetch
