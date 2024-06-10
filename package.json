@@ -1,0 +1,19 @@
+{
+  "name": "quran-api",
+  "version": "0.0.1",
+  "description": "API Pour le site d'écoute du Quran",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Mohamed Ouaouda",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.1.3"
+  }
+}
